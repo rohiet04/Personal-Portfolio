@@ -17,25 +17,58 @@ hr{
 
 h1{
   /* color: #1b6ca8; */
-  font-size: 60px;
+  letter-spacing: 0.8rem;
+  font-size: 2rem;
+  font-weight: 400;
   font-family: 'Merriweather', serif;
-  margin:0px auto 0px auto;
+  overflow: hidden;
+  white-space: nowrap;
+  margin:auto;
   color:#27496d;
+  width: 19ch;
+  animation:typing 5s steps(27), blink 1s ease-in-out 7s infinite;
 }
 
-h2
+@keyframeS typing{
+  75%{
+    width: 0ch;
+    color: rgba(249, 105, 14, 1);
+  }
+  100%{
+    width: 27ch;
+  }
+
+}
+
+
+@keyframes blink {
+  from{
+    border-right: 4px solid rgba(255,255,255,0);
+  }
+  to{
+    border-right: 4px solid #27496d;
+  }
+
+}
+
+/* h2
 {
   font-family: 'Merriweather', serif;
 margin:0px auto 40px auto;
   color:#27496d;
-  /* color:#1b6ca8; */
-}
+  /* color:#1b6ca8; }
+  */
 
-h3
+h2
 {
-margin:0px auto 20px auto;
-  color:#27496d;
-  /* color:#1b6ca8; */
+/* margin:0px auto 20px auto; */
+font-size: 2rem;
+margin:0px auto 40px auto;
+position: relative;
+/* color:rgba(249, 105, 14, 1); */
+background: linear-gradient(to right,rgba(249, 105, 14, 1) 0%, rgba(102, 51, 153, 1) 100%);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
 }
 
 .top-container
@@ -76,11 +109,11 @@ margin:0px auto 20px auto;
 
 
 .skill-row{
-  margin:50px auto 150px;
+  margin:50px auto 10%;
   text-align: left;
   width:50%;
   line-height: 2;
-
+  padding-bottom: 10px;
 }
 
 
@@ -88,6 +121,7 @@ margin:0px auto 20px auto;
   height:25%;
   float: left;
   margin-right: 30px;
+  margin-bottom: 30px;
 }
 
 
@@ -95,6 +129,7 @@ margin:0px auto 20px auto;
   height:25%;
   float: right;
   margin-left: 30px;
+  margin-bottom: 30px;
 }
 
 .nav-link{
@@ -103,4 +138,12 @@ margin:0px auto 20px auto;
 
 .col-intro{
   margin-top: -60px;
+}
+
+.contact-me{
+  margin-top: 30px;
+}
+
+.skills{
+  margin-bottom: 10px;
 }
